@@ -29,7 +29,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 Start a ubuntu image. The container will be named exercise-1-3:
 ```
-$ docker run -d -it --name exercise-1-3 ubuntu:16.04 sh -c 'read website; curl http://$website;'
+$ docker run -d -it --name exercise-1-3 ubuntu:16.04 sh -c 'read website; sleep 3; curl http://$website;'
 ```
 Install curl in the container:
 ```
