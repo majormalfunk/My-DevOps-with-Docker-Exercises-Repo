@@ -29,29 +29,31 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 Start a ubuntu image. The container will be named exercise-1-3:
 ```
-$ docker run -d -it --name exercise-1-3 ubuntu:16.04
+$ docker run -d -it --name exercise-1-3 ubuntu:16.04 sh -c 'read website; curl http://$website;'
 ```
-Enter the container and install curl:
+Install curl in the container:
 ```
-$ docker exec -it exercise-1-3 bash
-root@a3c669923f9a:/# apt-get update
+$ docker exec exercise-1-3 apt-get update
 ...
-root@a3c669923f9a:/# apt-get install curl
+$ docker exec exercise-1-3 apt-get install -y curl
 ...
 ```
-Exit the container:
+Attach to the container:
 ```
-root@a3c669923f9a:/# exit
+$ docker attach exercise-1-3
 ```
-Start the process in the container:
+Type the name of the website to ```curl```:
 ```
-$ docker exec -it exercise-1-3 sh -c 'read website; curl http://$website;'
+helsinki.fi
 ```
-
-
-
-
-
-
-
+The response is:
+```
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
+</body></html>
+```
 
