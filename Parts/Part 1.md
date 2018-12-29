@@ -98,9 +98,7 @@ Run Docker container:
 ```
 $ docker run -p 5000:5000 frontend
 ```
-The service will be in:
-```
-http://localhost:5000
-```
+The service will be in: http://localhost:5000
+
 
 
