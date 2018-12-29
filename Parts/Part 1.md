@@ -67,7 +67,7 @@ Build Docker image:
 ```
 $ docker build -t curler .
 ```
-Run Docker image:
+Run Docker container:
 ```
 $ docker run -it curler
 ```
@@ -84,6 +84,23 @@ The response is:
 <h1>Moved Permanently</h1>
 <p>The document has moved <a href="http://www.helsinki.fi/">here</a>.</p>
 </body></html>
+```
+
+### 1.5
+
+The Dockerfile: [Dockerfile](/Files/Exercise-1-5/Dockerfile)
+
+Build Docker image:
+```
+$ docker build -t frontend .
+```
+Run Docker container:
+```
+$ docker run -p 5000:5000 frontend
+```
+The service will be in:
+```
+http://localhost:5000
 ```
 
 
