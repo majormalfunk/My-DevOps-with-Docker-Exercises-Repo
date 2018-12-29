@@ -59,9 +59,9 @@ The response is:
 
 ### 1.4
 
-[Dockerfile](/Files/Exercise-1-4/Dockerfile)
+The Dockerfile: [Dockerfile](/Files/Exercise-1-4/Dockerfile)
 
-[curlscript.sh](/Files/Exercise-1-4/curlscript.sh)
+The script: [curlscript.sh](/Files/Exercise-1-4/curlscript.sh)
 
 Build Docker image:
 ```
