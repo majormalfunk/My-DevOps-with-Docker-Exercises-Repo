@@ -27,8 +27,31 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 
 ### 1.3
 
-Starting a ubuntu image. The container will be named exercise-1-3
+Start a ubuntu image. The container will be named exercise-1-3:
 ```
 $ docker run -d -it --name exercise-1-3 ubuntu:16.04
-
 ```
+Enter the container and install curl:
+```
+$ docker exec -it exercise-1-3 bash
+root@a3c669923f9a:/# apt-get update
+...
+root@a3c669923f9a:/# apt-get install curl
+...
+```
+Exit the container:
+```
+root@a3c669923f9a:/# exit
+```
+Start the process in the container:
+```
+$ docker exec -it exercise-1-3 sh -c 'read website; curl http://$website;'
+```
+
+
+
+
+
+
+
+
