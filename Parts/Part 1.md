@@ -59,6 +59,9 @@ The response is:
 
 ### 1.4
 
+[Dockerfile](My-DevOps-with-Docker-Exercises-Repo/Files/Exercise-1-4/Dockerfile)
+[curlscript.sh](My-DevOps-with-Docker-Exercises-Repo/Files/Exercise-1-4/curlscript.sh)
+
 Build Docker image:
 ```
 $ docker build -t curler .
