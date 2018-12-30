@@ -101,7 +101,7 @@ The service will be in: http://localhost:5000
 
 ### 1.6
 
-The Dockerfile: [Dockerfile](/Files/exercise-1-6/Dockerfile)
+The Dockerfile: [Dockerfile](/Files/Exercise-1-6/Dockerfile)
 
 Build Docker image:
 ```
@@ -116,12 +116,12 @@ $ docker run -d -v "$(pwd)"/logs.txt:/exercise/logs.txt -p 8000:8000 backend
 ```
 The service responds in: http://localhost:8000
 
-The log output: [logs.txt](/Files/exercise-1-6/logs.txt)
+The log output: [logs.txt](/Files/Exercise-1-6/logs.txt)
 
 ### 1.7
 
-The backend Dockerfile: [DockerfileBackend](/Files/exercise-1-7/DockerfileBackend) \
-The frontend Dockerfile: [DockerfileFrontend](/Files/exercise-1-7/DockerfileFrontend)
+The backend Dockerfile: [DockerfileBackend](/Files/Exercise-1-7/DockerfileBackend) \
+The frontend Dockerfile: [DockerfileFrontend](/Files/Exercise-1-7/DockerfileFrontend)
 
 Build Docker images:
 ```
@@ -137,8 +137,15 @@ $ docker run -d -p 5000:5000 frontend
 The frontend service responds in http://localhost:5000 \
 The backend service responds in http://localhost:8000
 
-The log output: [logs.txt](/Files/exercise-1-7/logs.txt)
+The log output: [logs.txt](/Files/Exercise-1-7/logs.txt)
 
+### 1.8
 
+The Dockerfile: [Dockerfile](/Files/Exercise-1-8/Dockerfile)
 
+Pull and run the application from Docker Hub:
+```
+$ docker run -it -p 8080:8080 majormalfunk/ohtutips
+```
+The service will be in: http://localhost:8080
 
