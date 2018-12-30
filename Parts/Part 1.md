@@ -96,9 +96,27 @@ $ docker build -t frontend .
 ```
 Run Docker container:
 ```
-$ docker run -p 5000:5000 frontend
+$ docker run -d -p 5000:5000 frontend
 ```
 The service will be in: http://localhost:5000
 
+### 1.6
+
+The Dockerfile: [Dockerfile](/Files/exercise-1-6/Dockerfile)
+
+Build Docker image:
+```
+$ docker build -t backend .
+```
+Create local file and then run Docker container:
+
+(*Need to have the double quotes around* ```$(pwd)``` *if you have uppercase characters (or spaces) in your path*)
+```
+$ touch logs.txt
+$ docker run -d -v "$(pwd)"/logs.txt:/exercise/logs.txt -p 8000:8000 backend
+```
+The service responds in: http://localhost:8000
+
+The log output: [logs.txt](/Files/exercise-1-6/logs.txt)
 
 
