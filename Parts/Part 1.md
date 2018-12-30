@@ -108,7 +108,7 @@ Build Docker image:
 ```
 $ docker build -t backend .
 ```
-Create local file and then run Docker container:
+Create local log file and then run Docker container:
 
 (*Need to have the double quotes around* ```$(pwd)``` *if you have uppercase characters (or spaces) in your path*)
 ```
@@ -119,4 +119,24 @@ The service responds in: http://localhost:8000
 
 The log output: [logs.txt](/Files/exercise-1-6/logs.txt)
 
+### 1.7
+
+The backend Dockerfile: [DockerfileBackend](/Files/exercise-1-7/DockerfileBackend)
+The frontend Dockerfile: [DockerfileFrontend](/Files/exercise-1-7/DockerfileFrontend)
+
+Build Docker images:
+```
+$ docker build -t backend -f DockerfileBackend .
+$ docker build -t frontend -f DockerfileFrontend .
+```
+Create local log file and then run Docker containers:
+```
+$ touch logs.txt
+$ docker run -d -v "$(pwd)"/logs.txt:/exercise/logs.txt -p 8000:8000 backend
+$ docker run -d -p 5000:5000 frontend
+```
+The frontend service responds in http://localhost:5000
+The backend service responds in http://localhost:8000
+
+The log output: [logs.txt](/Files/exercise-1-7/logs.txt)
 
