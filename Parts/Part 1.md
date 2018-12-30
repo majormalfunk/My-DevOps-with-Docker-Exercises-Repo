@@ -59,8 +59,7 @@ The response is:
 
 ### 1.4
 
-The Dockerfile: [Dockerfile](/Files/Exercise-1-4/Dockerfile)
-
+The Dockerfile: [Dockerfile](/Files/Exercise-1-4/Dockerfile) \
 The script: [curlscript.sh](/Files/Exercise-1-4/curlscript.sh)
 
 Build Docker image:
@@ -121,8 +120,7 @@ The log output: [logs.txt](/Files/exercise-1-6/logs.txt)
 
 ### 1.7
 
-The backend Dockerfile: [DockerfileBackend](/Files/exercise-1-7/DockerfileBackend)
-
+The backend Dockerfile: [DockerfileBackend](/Files/exercise-1-7/DockerfileBackend) \
 The frontend Dockerfile: [DockerfileFrontend](/Files/exercise-1-7/DockerfileFrontend)
 
 Build Docker images:
@@ -136,8 +134,7 @@ $ touch logs.txt
 $ docker run -d -v "$(pwd)"/logs.txt:/exercise/logs.txt -p 8000:8000 backend
 $ docker run -d -p 5000:5000 frontend
 ```
-The frontend service responds in http://localhost:5000
-
+The frontend service responds in http://localhost:5000 \
 The backend service responds in http://localhost:8000
 
 The log output: [logs.txt](/Files/exercise-1-7/logs.txt)
