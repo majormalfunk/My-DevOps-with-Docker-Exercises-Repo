@@ -139,6 +139,13 @@ The backend service responds in http://localhost:8000
 
 The log output: [logs.txt](/Files/Exercise-1-7/logs.txt)
 
+### 1.8
 
+The Dockerfile: [Dockerfile](/Files/Exercise-1-8/Dockerfile)
 
+Pull and run the application from Docker Hub:
+```
+$ docker run -it -p 8080:8080 majormalfunk/ohtutips
+```
+The service will be in: http://localhost:8080
 
