@@ -1,0 +1,27 @@
+version: '3.5'
+
+services:
+
+    backend:
+        image: backend-2-1
+        build:
+            context: .
+            dockerfile: DockerfileBackend
+        volumes:
+            - ./logs.txt:/exercise/logs.txt:rw
+        ports:
+            - 8000:8000
+        environment:
+            - FRONT_URL=http://localhost:5000
+        container_name: backend
+
+    frontend:
+        image: frontend-2-1
+        build:
+            context: .
+            dockerfile: DockerfileFrontend
+        ports:
+            - 5000:5000
+        environment:
+            - API_URL=http://localhost:8000
+        container_name: frontend
