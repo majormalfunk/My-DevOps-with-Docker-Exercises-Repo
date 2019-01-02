@@ -3,7 +3,8 @@
 ### 2.1
 
 The backend Dockerfile: [DockerfileBackend](/Files/Exercise-2-1/DockerfileBackend) \
-The frontend Dockerfile: [DockerfileFrontend](/Files/Exercise-2-1/DockerfileFrontend)
+The frontend Dockerfile: [DockerfileFrontend](/Files/Exercise-2-1/DockerfileFrontend) \
+The docker-compose file: [docker-compose.yml](/Files/Exercise-2-1/docker-compose.yml)
 
 Build Docker images:
 ```
