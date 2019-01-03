@@ -1,0 +1,46 @@
+version: '3.5'
+
+services:
+
+    backend:
+        image: backend-2-3
+        build:
+            context: .
+            dockerfile: DockerfileBackend
+        volumes:
+            - ./logs.txt:/exercise/logs.txt:rw
+        ports:
+            - 8000:8000
+        environment:
+            - FRONT_URL=http://localhost:5000
+            - REDIS=redis
+            - DB_USERNAME=postgres
+            - DB_PASSWORD=mysecretpassword
+            - DB_NAME=postgres
+            - DB_HOST=postgres
+        container_name: backend-2-3
+        depends_on:
+            - redis
+            - postgres
+
+    frontend:
+        image: frontend-2-3
+        build:
+            context: .
+            dockerfile: DockerfileFrontend
+        ports:
+            - 5000:5000
+        environment:
+            - API_URL=http://localhost:8000
+        container_name: frontend-2-3
+
+    redis:
+        image: redis
+        container_name: redis-2-3
+
+    postgres:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_PASSWORD: mysecretpassword
+        container_name: postgres-2-3
