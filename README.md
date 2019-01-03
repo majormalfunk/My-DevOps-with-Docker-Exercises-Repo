@@ -6,5 +6,5 @@ This is my repository for my solutions to the exercises in the Devops with Docke
 ## [Part 2](/Parts/Part%202.md)
 (not finished yet)
 
-## Part 3\
+## Part 3
 (not started yet)
