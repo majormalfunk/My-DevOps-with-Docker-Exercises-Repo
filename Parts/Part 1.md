@@ -143,7 +143,7 @@ The log output: [logs.txt](/Files/Exercise-1-7/logs.txt)
 
 The Dockerfile: [Dockerfile](/Files/Exercise-1-8/Dockerfile)
 
-Pull and run the application from Docker Hub:
+Pull and run the application from Docker Hub [majormalfunk/ohtutips](https://hub.docker.com/r/majormalfunk/ohtutips):
 ```
 $ docker run -it -p 8080:8080 majormalfunk/ohtutips
 ```
