@@ -1,0 +1,40 @@
+version: '3.5'
+
+services:
+
+    training:
+        image: training-2-4
+        build:
+            context: ./ml-kurkkumopo-training
+        volumes:
+            - ./imgs:/src/imgs:rw
+            - ./model:/src/model:rw
+        container_name: training-2-4
+
+    backend:
+        image: backend-2-4
+        build:
+            context: ./ml-kurkkumopo-backend
+        volumes:
+            - ./model:/src/model:rw
+        ports:
+            - 5000:5000
+        environment:
+            - FRONT_URL=http://localhost:3000
+        container_name: backend-2-4
+        depends_on:
+            - training
+
+    frontend:
+        image: frontend-2-4
+        build:
+            context: ./ml-kurkkumopo-frontend
+        ports:
+            - 3000:3000
+        environment:
+            - API_URL=http://localhost:5000
+        container_name: frontend-2-4
+        depends_on:
+            - training
+            - backend
+

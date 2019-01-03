@@ -1,3 +1,9 @@
 # macOS
 .DS_Store
 
+# cloned and downloaded stuff in 2.4
+*.jpg
+*.JPG
+*.sav
+Files/Exercise-2-4/ml-kurkkumopo*
+
