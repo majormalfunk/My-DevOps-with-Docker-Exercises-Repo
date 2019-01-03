@@ -54,3 +54,20 @@ $ docker-compose up -d
 The frontend service responds in http://localhost:5000 \
 The backend service responds in http://localhost:8000
 
+### 2.4
+The docker-compose file: [docker-compose.yml](/Files/Exercise-2-3/docker-compose.yml)
+
+Clone the repositories (*Couldn't make this work in docker-compose*):
+```
+git clone git@github.com:docker-hy/ml-kurkkumopo-training.git
+git clone git@github.com:docker-hy/ml-kurkkumopo-backend.git
+git clone git@github.com:docker-hy/ml-kurkkumopo-frontend.git
+```
+Build Docker images:
+```
+$ docker-compose build
+```
+Run Docker containers:
+```
+$ docker-compose up -d
+```
