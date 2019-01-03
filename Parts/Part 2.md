@@ -55,7 +55,7 @@ The frontend service responds in http://localhost:5000 \
 The backend service responds in http://localhost:8000
 
 ### 2.4
-The docker-compose file: [docker-compose.yml](/Files/Exercise-2-3/docker-compose.yml)
+The docker-compose file: [docker-compose.yml](/Files/Exercise-2-4/docker-compose.yml)
 
 Clone the repositories (*Couldn't make this work in docker-compose*):
 ```
