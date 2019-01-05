@@ -88,5 +88,5 @@ Create local log file and then run Docker containers:
 $ touch logs.txt
 $ docker-compose up -d
 ```
-The frontend service responds in http://localhost:5000 \
-The backend service responds in http://localhost:8000
+The frontend service responds in http://localhost \
+The backend service responds in http://localhost/api/
