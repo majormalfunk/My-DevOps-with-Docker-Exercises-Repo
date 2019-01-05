@@ -1,0 +1,57 @@
+version: '3.5'
+
+services:
+
+    backend:
+        image: backend-2-5
+        build:
+            context: .
+            dockerfile: DockerfileBackend
+        volumes:
+            - ./logs.txt:/exercise/logs.txt:rw
+        environment:
+            - REDIS=redis
+            - DB_USERNAME=postgres
+            - DB_PASSWORD=mysecretpassword
+            - DB_NAME=postgres
+            - DB_HOST=postgres
+        container_name: backend-2-5
+        depends_on:
+            - redis
+            - postgres
+
+    frontend:
+        image: frontend-2-5
+        build:
+            context: .
+            dockerfile: DockerfileFrontend
+        environment:
+            - API_URL=http://localhost/api
+        container_name: frontend-2-5
+        depends_on:
+            - redis
+            - postgres
+            - backend
+
+    redis:
+        image: redis
+        container_name: redis-2-5
+
+    postgres:
+        image: postgres
+        restart: unless-stopped
+        environment:
+            POSTGRES_PASSWORD: mysecretpassword
+        container_name: postgres-2-5
+
+    nginx-proxy: 
+        image: jwilder/nginx-proxy 
+        volumes: 
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./nginx.conf:/etc/nginx/nginx.conf 
+        ports: 
+            - 80:80
+        container_name: nginx-proxy-2-5
+        depends_on:
+            - backend
+            - frontend
