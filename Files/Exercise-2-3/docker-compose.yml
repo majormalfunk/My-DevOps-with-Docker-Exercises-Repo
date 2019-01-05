@@ -40,7 +40,7 @@ services:
 
     postgres:
         image: postgres
-        restart: always
+        restart: unless-stopped
         environment:
             POSTGRES_PASSWORD: mysecretpassword
         container_name: postgres-2-3
