@@ -76,7 +76,8 @@ $ docker-compose up -d
 
 The backend Dockerfile: [DockerfileBackend](/Files/Exercise-2-5/DockerfileBackend) \
 The frontend Dockerfile: [DockerfileFrontend](/Files/Exercise-2-5/DockerfileFrontend) \
-The docker-compose file: [docker-compose.yml](/Files/Exercise-2-5/docker-compose.yml)
+The docker-compose file: [docker-compose.yml](/Files/Exercise-2-5/docker-compose.yml) \
+The nginx configuration file: [nginx.conf](/Files/Exercise-2-5/nginx.conf)
 
 Build Docker images:
 ```
